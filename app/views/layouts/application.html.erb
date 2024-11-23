@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ControleVeiculo</title>
+    <title>Controle Veiculo</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   </head>
 
   <body>
-    <%= yield %>
+    <!-- Sidebar -->
+    <%= render 'shared/sidebar' %>
+
+    <!-- Main Panel -->
+    <div class="main">
+      <!-- Header -->
+      <%= render 'shared/content' %>
+      <%= render 'shared/card' %>
+      
+
+      <!-- Content -->
+      <div class="content">        
+        <%= yield %>
+      </div>
+      
+    </div>
   </body>
 </html>
